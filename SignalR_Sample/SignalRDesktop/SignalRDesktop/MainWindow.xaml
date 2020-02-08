@@ -1,0 +1,51 @@
+﻿<Window x:Class="SignalRDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SignalRDesktop"
+        mc:Ignorable="d"
+         Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="武神山医院监工在线交流群" VerticalAlignment="Center" FontSize="30" Margin="10 0 10 0"/>
+            <Button Name="btnIn" Content="进入" Width="100" Height="30" Click="btnIn_Click" />
+            <Button Name="btnOut" Content="退出" Width="100" Height="30" Margin="10 0 0 0" Click="btnOut_Click" />
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <TextBox Name="txtMsg" Margin="5" FontSize="15"/>
+
+                <TextBox Name="txtSend" Margin="5" Grid.Row="1" FontSize="15"/>
+
+                <Button Name="btnSend" IsEnabled="False" Grid.Row="2" 
+                        Click="btnSend_Click"
+                        Content="发送" Margin="5" Background="Green"
+                        BorderThickness="0"
+                        Foreground="White"/>
+
+            </Grid>
+
+            <TextBox Name="txtInfo" Grid.Column="1" Margin="5"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
